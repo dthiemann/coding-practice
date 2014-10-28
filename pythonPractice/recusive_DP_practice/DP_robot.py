@@ -1,18 +1,22 @@
+'''
+Given a sorted array A[0...n], there will be
+an element such that A[i] = i. Find this element
+'''
 
-def robotTraversal(num_rows, num_columns):
-    my_map = []
-    for i in range(num_columns):
-        my_map.append([])
-        for j in range(num_rows):
-            my_map[i].append(-1)
+myList = [-2,-1,0,1,2,3,4,5,6,8,9,10, 13, 14, 15]
 
-    robotTraversalHelper(0, 0, my_map)
+def magicNumber(myList):
+    return magicNumberHelper(myList, 0, len(myList))
 
-    return my_map[num_columns-1][num_rows-1]
+def magicNumberHelper(myList,start, end):
+    if (start >= end):
+        return -1
+    mid = int((end+start)/2)
+    if (myList[mid] == mid):
+        return mid
+    if myList[mid] < mid:
+        return magicNumberHelper(myList, mid+1, end)
+    else:
+        return magicNumberHelper(myList,start, mid)
 
-
-
-def robotTraversalHelper(x,y, map):
-    if x == len(map[0]) and y == len(map):
-        pass
-    return
+print(magicNumber(myList))
