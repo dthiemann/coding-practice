@@ -36,9 +36,4 @@ public class SpaceReplace {
 		}
 		return space_count;
 	}
-
-	public static void main(String args[]) {
-		space_replace_function("You had me at hello");
-	}
-	
 }
