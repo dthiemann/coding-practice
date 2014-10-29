@@ -109,5 +109,8 @@ public class TreeDriver {
 			myArray.add(i);
 		}
 		//driver.printTreeLineByLine(createTreeFromSortedList(myArray));
+		
+		System.out.println("DYNAMIC PROGRAMMING");
+		DynamicProgrammingExamples.helper();
 	}
 }
