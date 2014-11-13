@@ -8,7 +8,7 @@ def permutations(word):
     #get all permutations of length N-1
     perms=permutations(word[1:])
     char=word[0]
-    result=[]
+    result = []
     #iterate over all permutations of length N-1
     for perm in perms:
         #insert the character into every possible location
