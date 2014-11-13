@@ -42,6 +42,14 @@ public class SortFunctions {
 		}
 	}
 	
+	public static void mergeSort() {
+		
+	}
+	
+	public static void mergeHelper() {
+		
+	}
+	
 	public static void main(String args[]) {
 		int[] myArray = {4,3,7,3,4,2,7,9,4,4,2};
 		selectionSort(myArray);
