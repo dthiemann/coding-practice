@@ -1,21 +1,19 @@
 __author__ = 'dylanthiemann'
+import sys
+
 
 # Merge Sort
-def MergeSort(A):
+def mergeSort(A):
     n = len(A)
     if n > 1:
         B = A[0:n//2]
         C = A[(n//2): n]
-        MergeSort(B)
-        MergeSort(C)
-        Merge(B,C,A)
+        mergeSort(B)
+        mergeSort(C)
+        merge(B,C,A)
 
-def Merge(B,C,A):
-    i = 0
-    j = 0
-    k = 0
-    p = len(B)
-    q = len(C)
+def merge(B,C,A):
+    i, j, k, p, q = 0, 0, 0, len(B), len(C)
     while i < p and j < q:
         if (B[i] <= C[j]):
             A[k] = B[i]
@@ -30,7 +28,7 @@ def Merge(B,C,A):
         A[k:p+q] = B[i:p]
 
 # Insertion Sort
-def InsertionSort(A):
+def insertionSort(A):
     for i in range(len(A)):
         v = A[i]
         j = i - 1
@@ -38,3 +36,30 @@ def InsertionSort(A):
             A[j+1] = A[j]
             j = j - 1
         A[j+1] = v
+
+def selectionSort(A):
+    for i in range(0,len(A)):
+        currentMin = i
+        for j in range(i, len(A)):
+            if A[j] < A[currentMin]:
+                currentMin = j
+        temp = A[i]
+        A[i] = A[currentMin]
+        A[currentMin] = temp
+
+
+
+def main():
+    myList = [5,2,6,3,1,6,75,7,2,8,3,2]
+    mergeSort(myList)
+    print("Merge Sort: " + str(myList))
+
+    myList = [5,2,6,3,1,6,75,7,2,8,3,2]
+    insertionSort(myList)
+    print("Insertion Sort: " + str(myList))
+
+    myList = [5,2,6,3,1,6,75,7,2,8,3,2]
+    selectionSort(myList)
+    print("Selection Sort: " + str(myList))
+
+main()
