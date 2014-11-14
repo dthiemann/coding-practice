@@ -1,5 +1,7 @@
 package testing;
 
+import java.util.ArrayList;
+
 public class SortFunctions {
 
 	public static void selectionSort(int[] myArray) {
@@ -42,12 +44,13 @@ public class SortFunctions {
 		}
 	}
 	
-	public static void mergeSort() {
-		
+	public static void mergeSort(ArrayList<Integer> myList) {
+		ArrayList<Integer> B = (ArrayList<Integer>) myList.subList(0, myList.size()/2);
+		ArrayList<Integer> C = (ArrayList<Integer>) myList.subList(myList.size()/2, myList.size());
 	}
 	
-	public static void mergeHelper() {
-		
+	public static ArrayList<Integer> mergeHelper() {
+		return null;
 	}
 	
 	public static void main(String args[]) {
