@@ -41,7 +41,7 @@ public class DynamicProgrammingExamples {
 	}
 	
 	public static void helper() {
-		System.out.println(numberOfDifferentTraversals(15));
+		System.out.println(numberOfDifferentTraversals(5));
 		
 		int n = 5;
 		int[] map = new int[n+1];

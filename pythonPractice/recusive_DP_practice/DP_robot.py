@@ -67,3 +67,4 @@ def permutations(word):
             result.append(perm[:i] + char + perm[i:])
     return result
 
+print(permutations("halo"))
