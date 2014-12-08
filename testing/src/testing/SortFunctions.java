@@ -77,9 +77,7 @@ public class SortFunctions {
 		return ' ';
 	}
 	
-	public static ArrayList<String> createPrefixList(String myString) {
-		
-	}
+	
 	
 	public static void main(String args[]) {
 		/*
