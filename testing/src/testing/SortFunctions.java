@@ -53,7 +53,36 @@ public class SortFunctions {
 		return null;
 	}
 	
+	public static String reverseWordsInString(String myString) {
+		String newString = "";
+		
+		String[] myArray = myString.split(" ", 0);
+		int length = myArray.length;
+		
+		newString += myArray[length - 1];
+		for (int i = 1; i < length; i++) {
+			//System.out.println(i + myArray[1]);
+			newString += " ";
+			newString += myArray[length - i - 1];
+		}
+		return newString;
+	}
+	
+	public static char getFirstNonrepeatingChar(String myString) {
+		for (char i : myString.toCharArray()) {
+			if (myString.indexOf(i) == myString.lastIndexOf(i)) {
+				return i;
+			}
+		}
+		return ' ';
+	}
+	
+	public static ArrayList<String> createPrefixList(String myString) {
+		
+	}
+	
 	public static void main(String args[]) {
+		/*
 		int[] myArray = {4,3,7,3,4,2,7,9,4,4,2};
 		selectionSort(myArray);
 		for (int i = 0; i < myArray.length; i++) {
@@ -74,6 +103,13 @@ public class SortFunctions {
 			System.out.print(myArray3[i]);
 			System.out.print(", ");
 		}
+		*/
+		
+		String newString = reverseWordsInString("Hello World");
+		System.out.println(newString);
+		
+		char myChar = getFirstNonrepeatingChar("stress");
+		System.out.println(myChar);
 	}
 	
 }

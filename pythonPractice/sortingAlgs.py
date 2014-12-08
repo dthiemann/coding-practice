@@ -1,5 +1,6 @@
 __author__ = 'dylanthiemann'
 import sys
+import math
 
 
 # Merge Sort
@@ -47,6 +48,12 @@ def selectionSort(A):
         A[i] = A[currentMin]
         A[currentMin] = temp
 
+def isPrime(n):
+    for i in range(2, int(math.sqrt(n))):
+        if n%i == 0:
+            return False
+    return True
+
 
 
 def main():
@@ -61,5 +68,8 @@ def main():
     myList = [5,2,6,3,1,6,75,7,2,8,3,2]
     selectionSort(myList)
     print("Selection Sort: " + str(myList))
+
+    print(isPrime(17))
+    print(isPrime(27))
 
 main()
